@@ -15,7 +15,7 @@ namespace Chess_WPF
         }
 
         public Color PieceColor { get; set; }
-        public (int Row, int Col) Position { get; set; } // позиция на доске
+        public (int Row, int Col) Position { get; set; }
         public string Name { get; protected set; }
 
         public Piece(Color color, int row, int col)
