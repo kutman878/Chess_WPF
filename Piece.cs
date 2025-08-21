@@ -15,7 +15,7 @@ namespace Chess_WPF
         }
 
         public Color PieceColor { get; set; }
-        public (int Row, int Col) Position { get; set; } // позиция на доске
+        public (int Row, int Col) Position { get; set; }
         public string Name { get; protected set; }
 
         public Piece(Color color, int row, int col)
@@ -24,10 +24,10 @@ namespace Chess_WPF
             Position = (row, col);
         }
 
-        // абстрактный метод для проверки допустимых ходов
+        // проверка допустимых ходов
         public abstract bool IsValidMove(int targetRow, int targetCol, Piece[,] board);
 
-        // перемещение фигуры
+        // ход
         public void Move(int targetRow, int targetCol)
         {
             Position = (targetRow, targetCol);
