@@ -24,10 +24,10 @@ namespace Chess_WPF
             Position = (row, col);
         }
 
-        // абстрактный метод для проверки допустимых ходов
+        // проверка допустимых ходов
         public abstract bool IsValidMove(int targetRow, int targetCol, Piece[,] board);
 
-        // перемещение фигуры
+        // ход
         public void Move(int targetRow, int targetCol)
         {
             Position = (targetRow, targetCol);
